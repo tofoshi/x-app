@@ -1,4 +1,4 @@
-# services/users/project/tests/test_config.py
+# jservices/users/project/tests/test_config.py
 
 import os
 import unittest

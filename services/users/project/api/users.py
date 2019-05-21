@@ -1,4 +1,4 @@
-# services/users/project/api/users.py
+# jservices/users/project/api/users.py
 from flask import Blueprint, jsonify, request, render_template
 
 from project.api.models import User

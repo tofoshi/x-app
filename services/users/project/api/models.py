@@ -1,4 +1,4 @@
-# services/users/project/api/models.py
+# jservices/users/project/api/models.py
 
 from sqlalchemy.sql import func
 
