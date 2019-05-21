@@ -11,6 +11,7 @@ from flask_cors import CORS
 # instanciar db
 db = SQLAlchemy()
 toolbar = DebugToolbarExtension()
+cors = CORS()
 
 
 # new
@@ -19,9 +20,6 @@ def create_app(script_info=None):
     # instaciar app
     app = Flask(__name__)
 
-    # habilitando CORS
-    CORS(app)
-
     # set config
     app_settings = os.getenv('APP_SETTINGS')
     app.config.from_object(app_settings)
@@ -29,6 +27,7 @@ def create_app(script_info=None):
     # set up extensions
     db.init_app(app)
     toolbar.init_app(app)
+    cors.init_app(app)
 
     # register blueprints
     from project.api.users import users_blueprint
