@@ -186,7 +186,10 @@ class TestUserService(BaseTestCase):
         with self.client:
             response = self.client.post(
                 '/',
-                data=dict(username='jos', email='josvillegas@upeu.edu.pe', password='greaterthaneight'),
+                data=dict(
+                    username='jos',
+                    email='josvillegas@upeu.edu.pe',
+                    password='greaterthaneight'),
                 follow_redirects=True
             )
             self.assertEqual(response.status_code, 200)
