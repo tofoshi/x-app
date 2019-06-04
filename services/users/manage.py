@@ -41,8 +41,8 @@ def test():
 @cli.command('seed_db')
 def seed_db():
    """Sembrado en la base de datos"""
-   db.session.add(User(username='jos', email='josvillegas@upeu.edu.pe'))
-   db.session.add(User(username='toshi', email='tofoshi@gmail.com'))
+   db.session.add(User(username='jos', email='josvillegas@upeu.edu.pe', password='greaterthaneight'))
+   db.session.add(User(username='toshi', email='tofoshi@gmail.com', password='greaterthaneight'))
    db.session.commit()
 
 # nuevo
